@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,13 +12,14 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://joashpt.github.io/wdd330/project/index.html">
 
-
     <title>Quote Yodafication</title>
 
     <link rel="stylesheet" href="../styles/base.css">
-    <script src="../scripts/main.js" type="module"></script>
+
+    <script src="../scripts/search.js" type="module"></script>
     <script src="../scripts/reuse.js" defer></script>
 </head>
+
 <body>
     <header>
         <div>
@@ -32,8 +34,8 @@
         <a id="menu"></a>
         <nav class="navigation">
             <ul>
-                <li class="activeMenu"><a href="#">Home</a></li>
-                <li><a href="./search.html">Search</a></li>
+                <li><a href="./index.html">Home</a></li>
+                <li class="activeMenu"><a href="#">Search</a></li>
                 <li><a href="./saved.html">Saved</a></li>
                 <li><a href="./join.html">Join</a></li>
             </ul>
@@ -41,36 +43,18 @@
     </header>
     <main>
         <section>
-            <h2>Welcome to Quote Yodafication!</h2>
-                <p>
-                    This website serves as a hub for quotes all over the world. Maybe you would find the right words you needed to hear
-                    by browsing through our collection.
-                </p>
+            <h2>Looking for Something?</h2>
+            <p>Try our Quote Search Engine! Enter some keywords and see the magic happen!</p>
         </section>
-        <section>
-            <h2>Feeling Lucky?</h2>
-                <p>
-                    Try our quote randomizer! Just press the button and it will show you a random quote from our system. An unexpected quote may 
-                    just be the one you need! 
-                </p>
-                <button class="random">Randomize!</button>
-                <div>
-                    <ul class="resultRandom">
-            
-                    </ul>
-                </div>
-        </section>
-        <section>
-            <h2>Feeling Inspired?</h2>
-            <p>
-                Write your own quote today! If you are not satisied with our collection of quotes, or if you are feeling poetic, philosophic,
-                or extra witty today; try our Quote Creator and make spread your own wisdom!
-            </p>
-            <div>
-                <input type="text" class="quoteCreate">
-                <button class="create">Create</button>
-            </div>
-        </section>
+        <div>
+            <input type="text" class="searchBar">
+            <button class="search">Search</button>
+        </div>
+        <div>
+            <ul class="result">
+                
+            </ul>
+        </div>
     </main>
     <footer>
         <div>
@@ -96,6 +80,7 @@
             <p>&#169;<span id="currentYear"></span>Quote Yodafication</p>
             <p id="lastModified"></p>
         </div>
-    </footer>
+    </footer>    
 </body>
+
 </html>

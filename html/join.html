@@ -15,7 +15,8 @@
     <title>Quote Yodafication</title>
 
     <link rel="stylesheet" href="../styles/base.css">
-    <script src="../scripts/main.js" type="module"></script>
+
+    <script src="../scripts/" type="module"></script>
     <script src="../scripts/reuse.js" defer></script>
 </head>
 <body>
@@ -32,44 +33,68 @@
         <a id="menu"></a>
         <nav class="navigation">
             <ul>
-                <li class="activeMenu"><a href="#">Home</a></li>
+                <li><a href="./index.html">Home</a></li>
                 <li><a href="./search.html">Search</a></li>
                 <li><a href="./saved.html">Saved</a></li>
-                <li><a href="./join.html">Join</a></li>
+                <li class="activeMenu"><a href="#">Join</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section>
-            <h2>Welcome to Quote Yodafication!</h2>
-                <p>
-                    This website serves as a hub for quotes all over the world. Maybe you would find the right words you needed to hear
-                    by browsing through our collection.
-                </p>
-        </section>
-        <section>
-            <h2>Feeling Lucky?</h2>
-                <p>
-                    Try our quote randomizer! Just press the button and it will show you a random quote from our system. An unexpected quote may 
-                    just be the one you need! 
-                </p>
-                <button class="random">Randomize!</button>
-                <div>
-                    <ul class="resultRandom">
-            
-                    </ul>
-                </div>
-        </section>
-        <section>
-            <h2>Feeling Inspired?</h2>
-            <p>
-                Write your own quote today! If you are not satisied with our collection of quotes, or if you are feeling poetic, philosophic,
-                or extra witty today; try our Quote Creator and make spread your own wisdom!
-            </p>
             <div>
-                <input type="text" class="quoteCreate">
-                <button class="create">Create</button>
+                <h2>Join</h2>
+                <p>
+                    Register, and receive free quotes daily! You will also have the ability to save your quotes in your account.
+                </p>
             </div>
+        </section>
+        <section>
+            <form method="get" action="./thankyou.html">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label>First Name <span>*</span>
+                        <input 
+                            type="text" 
+                            id="fname" 
+                            name="fname" 
+                            pattern="[A-Za-z\s]{1,}"
+                            autocomplete="given-name" 
+                            title="Your first name" 
+                            required>
+                    </label>
+                    <label>Last Name <span>*</span>
+                        <input 
+                            type="text" 
+                            id="lname" 
+                            name="lname" 
+                            pattern="[A-Za-z\s]{1,}"
+                            autocomplete="family-name" 
+                            title="Your last name" 
+                            required>
+                    </label>
+                    <label>Email Address <span>*</span>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email"
+                            autocomplete="email"
+                            placeholder="someone@somewhere.com"
+                            title="Your email address"
+                            required></label>
+                    <label>Mobile Phone Number <span>*</span>
+                        <input 
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            pattern="[0-9]{10}"
+                            autocomplete="phone"
+                            title="Your phone number"
+                            required>
+                    </label>
+                    <input type="submit" value="Join Us!">
+                </fieldset>
+            </form>
         </section>
     </main>
     <footer>
